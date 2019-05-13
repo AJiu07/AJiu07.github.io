@@ -1,5 +1,5 @@
 $(function(){
-	$('h1').click(function(){
-		alert('yolo');
-	})
-})
+	$('#my').click(function(){
+        $('.header').css("display",'none');
+    })
+});
