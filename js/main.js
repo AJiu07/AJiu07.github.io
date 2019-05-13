@@ -1,5 +1,10 @@
 $(function(){
 	$('#my').click(function(){
         $('.header').css("display",'none');
-    })
+        $('.banner').show(3000);
+    });
+    $('#My').click(function(){
+        $('.banner').css("display",'none');
+        $('.header').show(3000);
+    });
 });

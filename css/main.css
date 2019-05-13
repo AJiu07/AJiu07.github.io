@@ -40,7 +40,7 @@ body{
     margin-top: 20px;
     font-size: 80px;
 }
-.header a img{
+.header .my img{
     height: 50px;
     width: 50px;
     float: right;
@@ -48,6 +48,7 @@ body{
     margin-top: 30px;
 }
 .banner{
+	display: none;
     overflow: hidden;
 }
 .banner img{
@@ -68,17 +69,26 @@ body{
 }
 .banner-b h1{
     font-size: 65px;
+    margin-bottom: 30px;
 }
 .banner-b img{
     position: absolute;
     width: 250px;
     height: auto;
-    padding: 20px;
+    padding: 10px;
     left: 30px;
     border-bottom: 5px solid #C0C0C0;
 }
 .banner-b h5{
     position: absolute;
     margin-top: 320px;
-    margin-left: 75px;
+    margin-left: 85px;
+}
+.footer img{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%,-50%);
 }
