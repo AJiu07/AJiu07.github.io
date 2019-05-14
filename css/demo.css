@@ -4,13 +4,87 @@
 }
 body{
 	width: 100%;
-	height: auto;
-	background: #07cbc9;
+	height: 100%;
 }
-h1{
-	text-align: center;
-	position: absolute;
+header{
+    width: 100%;
+}
+header .bg{
+    background: url(../img/4.jpg) no-repeat;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    min-width: 100%;
+    z-index:-10;
+    zoom: 1;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+}
+.header{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+}
+.header .dh{
+    float: right;
+    margin-right: 350px;
+    margin-top: 10px;
+}
+header .dh a{
+   text-decoration:none;
+   color: #fff;
+   font-size: 30px;
+   margin-left: 50px;
+}
+header .dh li{
+    list-style: none;
+    float: left;
+}
+.banner{
+    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    color: #fff;
+    text-shadow: 5px 5px 25px #fff;
+    text-align: center;
+}
+.banner h1{
+    font-size: 58px;
+}
+.my{
+    display: none;
+}
+.my img{
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin: 10px;
+}
+section{
+
+}
+
+@media(max-width:960px){
+    body{
+        width: 100%;
+    }
+    .header .dh{
+        display: none;
+    }
+    .banner h1{
+        font-size: 25px;
+    }
+    .my{
+        display: block;
+    }
+    .my .dh a{
+
+    }
 }

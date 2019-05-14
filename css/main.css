@@ -30,6 +30,8 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    color: #fff;
+    text-shadow: 5px 5px 25px #fff;
 }
 .header .content p{
     font-size: 65px;
@@ -48,7 +50,7 @@ body{
     margin-top: 30px;
 }
 .banner{
-	display: none;
+    display: none;
     overflow: hidden;
 }
 .banner img{
@@ -85,10 +87,42 @@ body{
     margin-left: 85px;
 }
 .footer img{
-	width: 40px;
-	height: 40px;
-	position: absolute;
+    width: 40px;
+    height: 40px;
+    position: absolute;
     left: 50%;
     top: 75%;
     transform: translate(-50%,-50%);
 }
+
+@media(max-width:960px){
+            body{
+                width: 100%;
+            }
+            #content{
+                width:100%;
+                text-align: center;
+            }
+            #content h1{
+                font-size: 40px;
+            }
+            #my img{
+                height: 30px;
+                width: 30px;
+                float: right;
+                margin-right: 20px;
+                margin-top: 20px;
+            }
+            .banner img{
+                height: 30px;
+                width: 30px;
+                float: right;
+                margin-right: 20px;
+                margin-top: 20px;
+            }
+            .banner-b img{
+                width: 200px;
+                height: auto;
+                margin-left: 20px;
+            }
+        }
