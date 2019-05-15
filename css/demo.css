@@ -20,7 +20,6 @@ header .bg{
     z-index:-10;
     zoom: 1;
     background-color: #fff;
-    background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -31,18 +30,18 @@ header .bg{
     width: 100%;
     height: 60px;
 }
-.header .dh{
+.dh{
     float: right;
     margin-right: 350px;
     margin-top: 10px;
 }
-header .dh a{
+.dh a{
    text-decoration:none;
    color: #fff;
    font-size: 30px;
    margin-left: 50px;
 }
-header .dh li{
+.dh li{
     list-style: none;
     float: left;
 }
@@ -56,21 +55,62 @@ header .dh li{
     text-align: center;
 }
 .banner h1{
-    font-size: 58px;
+    font-size: 40px;
+    text-align: center;
 }
 .my{
     display: none;
 }
 .my img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     float: right;
     margin: 10px;
 }
 section{
-
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 1000px;
+}
+section .blog{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-shadow: 5px 5px 25px #fff;
+    text-align: center;
+    margin-top: 5px;
+}
+section h1:before{
+    content: '';
+    width: 100%;
+    height: 500px;
+    display: block;
+    background-size: 100% 100%;
+    background-image: url(../img/5.jpg) no-repeat;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:767px){
+    
+}
 @media(max-width:960px){
     body{
         width: 100%;
@@ -79,12 +119,22 @@ section{
         display: none;
     }
     .banner h1{
-        font-size: 25px;
+        font-size: 23px;
     }
     .my{
         display: block;
     }
-    .my .dh a{
-
+    .my .dh1 {
+        width: 100%;
+        padding-top: 60px;
+        display: none;
+    }
+    .my .dh1 a{
+        text-decoration:none;
+        font-size: 25px;
+        color: #fff;
+    }
+    .my .dh1 li{
+        border-top: 2px solid #fff;
     }
 }
