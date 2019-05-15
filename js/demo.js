@@ -31,7 +31,7 @@ $(function(){
             var topp = $(document).scrollTop();
                 //判断如果滚动条大于10则改变.header背景色
                 if(topp > 400){
-                    $('.banner').css("top","27%");
+                    $('.banner').css("top","28%");
                 }else {
                     $('.banner').css("top","50%");
                 }
