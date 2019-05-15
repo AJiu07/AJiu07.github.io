@@ -16,10 +16,13 @@ $(function(){
                 }
             });
     });
+
     //自适应导航栏
     $('.my').click(function(){
             $('.dh1').toggle();
         });
+
+    //滚动浏览器时调整h1位置
     $(document).ready(function(){
         //在文档加载完毕后执行
         $(window).scroll(function(){
@@ -27,12 +30,23 @@ $(function(){
             //获取当前滚动条高度
             var topp = $(document).scrollTop();
                 //判断如果滚动条大于10则改变.header背景色
-                if(topp > 500){
-                    $('.banner').css("top","13%");
+                if(topp > 400){
+                    $('.banner').css("top","27%");
                 }else {
                     $('.banner').css("top","50%");
                 }
             });
     });
 
+    $('.blog-bg').hover(function(){
+        $('.blog-bg a').css({
+            background: "#F9F900",
+            color: "#6C3365"
+        });
+    },function(){
+        $('.blog-bg a').css({
+            background: "#6C3365",
+            color: "#fff"
+        });
+    });
 });  
