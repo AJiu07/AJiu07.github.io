@@ -227,6 +227,7 @@ body{
 	border-radius: 10px;
 	margin-top: 70px;
 	box-shadow: 5px 5px 5px #696969;
+	margin-bottom: 100px;
 }
 .comment .ly img{
 	border-radius: 100%;
@@ -234,9 +235,62 @@ body{
 	margin-left: 50px;
 	margin-top: 72px;
 }
-
-
-
+.comment .ly h2{
+	float: left;
+	padding-top: 51px;
+	padding-left: 40px;
+}
+.comment .ly p{
+	float: left;
+	padding-top: 170px;
+	margin-left: -180px;
+	font-size: 20px;
+}
+.paging{
+	height: 200px;
+}
+.paging li{
+	list-style: none;
+	float: left;
+	width: 50px;
+	height: 50px;
+	background: #fff;
+	border-radius: 10px;
+	border: none;
+	margin-left: 40px;
+}
+.paging a{
+	float: left;
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	text-decoration: none;
+	color: #9999FF;
+	padding-top: 10px;
+	font-weight: bolder;
+}
+.paging button{
+	width: 150px;
+	height: 50px;
+	background: #fff;
+	border-radius: 10px;
+	border: none;
+	border: 1px solid #fff;
+}
+.paging #btn1{
+	float: left;
+	margin-left: 170px;
+}
+.paging #btn1 a{
+	width: 150px;
+}
+.paging #btn2 a{
+	width: 150px;
+}
+.paging #btn2{
+	float: right;
+	margin-right: 170px;
+}
 
 
 
@@ -319,7 +373,7 @@ body{
 	}
 	.left .center-two a{
 		float: left;
-		margin-left: 40px;
+		margin-left: 50px;
 		width: 150px;
 		height: 50px;
 		background: #000;
@@ -332,7 +386,7 @@ body{
 	}
 	.left .center-two .message a{
 		float: left;
-		margin-left: 30px;
+		margin-left: -10px;
 	}
 	.right{
 		height: 2000px;
@@ -344,6 +398,150 @@ body{
 		margin-right: -160px;
 		margin-top: -170px;
 	}
+
+	.message{
+		width: 70%;
+		height: auto;
+		position: absolute;
+		float: left;
+		overflow: auto;
+		text-align: center; 
+		left: 300px;
+	}
+	.message .title h1{
+		font-weight: bolder;
+		margin-top: 80px;
+	}
+	.message .banner .ly{
+		width: 500px;
+		height: 350px;
+		background: #B0E0E6;
+		margin-left: 170px;
+		border-radius: 10px;
+		padding-top: 50px;
+		box-shadow: 5px 5px 5px #696969;
+	}
+	.message .banner .ly img{
+		float: left;
+		margin-left: 50px;
+	}
+	.message .banner .ly input{
+		width: 200px;
+		height: 70px;
+		margin-top: 100px;
+		float: left;
+		font-size: 20px;
+		border: none;
+	}
+	.message .banner .ly #y1{
+		margin: 0 20px;
+		border-radius: 10px;
+		width: 335px;
+		height: 50px;
+	}
+	.message .banner .ly #y2{
+		margin-top: 100px;
+		float: left;
+		font-size: 20px;
+		border: none;
+		margin-top: 15px;
+		border-radius: 10px;
+		width: 420px;
+		height: 60px;
+		margin-left: 50px;
+	}
+	.message .banner .ly #y3{
+		font-size: 16px;
+		margin-top: 20px;
+		margin-left: 52px;
+		border-radius: 10px;
+		width: 420px;
+		height: 40px;
+	}
+	.message .banner .ly #btn{
+		width: 200px;
+		height: 70px;
+		margin-top: 214px;
+		margin-left: -245px;
+		border-radius: 10px;
+		background: #fff;
+		border: none;
+		font-size: 20px;
+		font-weight: bolder;
+	}
+	.comment .ly{
+		width: 500px;
+		height: 350px;
+		background: #B0E0E6;
+		margin-left: 170px;
+		border-radius: 10px;
+		margin-top: 70px;
+		box-shadow: 5px 5px 5px #696969;
+		margin-bottom: 100px;
+	}
+	.comment .ly img{
+		border-radius: 100%;
+		float: left;
+		margin-left: 50px;
+		margin-top: 72px;
+	}
+	.comment .ly h2{
+		float: left;
+		padding-top: 51px;
+		padding-left: 40px;
+	}
+	.comment .ly p{
+		float: left;
+		padding-top: 30px;
+		padding-left: 200px;
+		font-size: 20px;
+	}
+	.paging{
+		height: 200px;
+	}
+	.paging li{
+		list-style: none;
+		float: left;
+		width: 50px;
+		height: 50px;
+		background: #fff;
+		border-radius: 10px;
+		border: none;
+		margin-left: 40px;
+	}
+	.paging a{
+		float: left;
+		width: 50px;
+		height: 50px;
+		font-size: 20px;
+		text-decoration: none;
+		color: #9999FF;
+		padding-top: 10px;
+		font-weight: bolder;
+	}
+	.paging button{
+		width: 150px;
+		height: 50px;
+		background: #fff;
+		border-radius: 10px;
+		border: none;
+		border: 1px solid #fff;
+	}
+	.paging #btn1{
+		float: left;
+		margin-left: 170px;
+	}
+	.paging #btn1 a{
+		width: 150px;
+	}
+	.paging #btn2 a{
+		width: 150px;
+	}
+	.paging #btn2{
+		float: right;
+		margin-right: 170px;
+	}
+
 }
 @media(max-width:800px){
 	.left{
