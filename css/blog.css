@@ -22,6 +22,7 @@ body{
 	padding-top: 30px;
 	color: #fff;
 	opacity: 0.5;
+	border-radius: 10px;
 }
 .left .top a{
 	margin: 10px;
@@ -98,12 +99,14 @@ body{
 	left: 40%;
 	float: left;
 	overflow: auto;
+	display: none;
 }
 .right li{
 	list-style: none;
 	width: 60%;
 	height: 300px;
 	margin: 70px;
+	margin-top: 70px;
 }
 .right li a{
 	text-decoration: none;
@@ -115,22 +118,132 @@ body{
 .right li a content{
 	display: block;
 	width: 85%;
-	font-size: 16px;
+	font-size: 14px;
 	padding-bottom: 20px;
-	border-bottom: 1px solid #000;
+	border-bottom: 2px solid #000;
 }
 .right li a p{
 	margin-top: 20px;
 }
 .right li a img{
 	float: right;
-	width: 100px;
+	width: 200px;
 	height: auto;
-	margin-right: -150px;
+	margin-right: -200px;
 	margin-top: -170px;
+	box-shadow: 5px 5px 5px #696969;
+	border-radius: 15px;
+}
+.footer {
+	width: 100px;
+	height: 50px;
+	background: #696969;
+	margin-bottom: 150px;
+	margin-left: 100px;
+	text-align: center;
+	border-radius: 20px;
+}
+.footer a{
+	text-decoration: none;
+	display: block;
+	padding-top: 15px;
+	color: #fff;
 }
 
-@media(max-width:1280px){
+.message{
+	width: 60%;
+	height: auto;
+	position: absolute;
+	left: 40%;
+	float: left;
+	overflow: auto;
+	text-align: center; 
+}
+.message .title h1{
+	font-weight: bolder;
+	margin-top: 80px;
+}
+.message .banner .ly{
+	width: 800px;
+	height: 350px;
+	background: #B0E0E6;
+	margin-left: 170px;
+	border-radius: 10px;
+	padding-top: 50px;
+	box-shadow: 5px 5px 5px #696969;
+}
+.message .banner .ly img{
+	float: left;
+	margin-left: 50px;
+}
+.message .banner .ly input{
+	width: 200px;
+	height: 70px;
+	margin-top: 100px;
+	float: left;
+	font-size: 20px;
+	border: none;
+}
+.message .banner .ly #y1{
+	margin: 0 20px;
+	border-radius: 10px;
+	width: 300px;
+	height: 50px;
+}
+.message .banner .ly #y2{
+	margin-top: 100px;
+	float: left;
+	font-size: 20px;
+	border: none;
+	margin-top: 74px;
+	margin-left: -403px;
+	border-radius: 10px;
+	width: 720px;
+	height: 80px;
+}
+.message .banner .ly #y3{
+	font-size: 16px;
+	margin-top: 30px;
+	margin-left: 52px;
+	border-radius: 10px;
+	width: 450px;
+}
+.message .banner .ly #btn{
+	width: 200px;
+	height: 70px;
+	margin-top: 30px;
+	margin-left: 45px;
+	border-radius: 10px;
+	background: #fff;
+	border: none;
+	font-size: 20px;
+	font-weight: bolder;
+}
+.comment .ly{
+	width: 800px;
+	height: 350px;
+	background: #B0E0E6;
+	margin-left: 170px;
+	border-radius: 10px;
+	margin-top: 70px;
+	box-shadow: 5px 5px 5px #696969;
+}
+.comment .ly img{
+	border-radius: 100%;
+	float: left;
+	margin-left: 50px;
+	margin-top: 72px;
+}
+
+
+
+
+
+
+
+
+
+@media(max-width:1366px){
 	.left{
 		width: 40%;
 		background: #fff;
@@ -198,7 +311,7 @@ body{
 	}
 	.left .center-two{
 		width: 100%;
-		height: 200px;
+		height: 300px;
 		background: #fff;
 		font-size: 20px;
 		padding-top: 30px;
@@ -216,16 +329,19 @@ body{
 		opacity: 0.5;
 		text-decoration:none;
 		color: #fff;
-		margin-top: -10px;
+	}
+	.left .center-two .message a{
+		float: left;
+		margin-left: 30px;
 	}
 	.right{
 		height: 2000px;
 	}
 	.right li a img{
 		float: right;
-		width: 50px;
+		width: 200px;
 		height: auto;
-		margin-right: 150px;
+		margin-right: -160px;
 		margin-top: -170px;
 	}
 }
@@ -265,7 +381,7 @@ body{
 	}
 	.right li{
 		width: 100%;
-		height: 700px;
+		height: 800px;
 	}
 	.right li a{
 		color: #000;
@@ -291,5 +407,7 @@ body{
 		margin-top: 50px;
 		padding-left: -50px;
 		margin-bottom: 50px;
+		position: absolute;
+		left: 50px;
 	}
 }
