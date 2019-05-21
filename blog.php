@@ -26,6 +26,7 @@
 $pdo = new PDO("mysql:host=localhost;dbname=9c",'root','');
 $pdo->exec("set names utf8");
 $sql = "SELECT username FROM yolo";
+//$sql = "SELECT * FROM yolo";
 $res = $pdo->query($sql);
 $row = $res->fetchAll();
 
