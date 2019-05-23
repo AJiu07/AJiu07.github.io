@@ -15,7 +15,7 @@ $(function(){
              html += "<div class='pl'>";
              html += "<img src='img/6.png'>";
              html += "<p class='name'>" + element.username + "</p>"
-             html += "<p class='content'>" + "" +"</p>";
+             html += "<p class='content'>" + element.password +"</p>";
              html += "</div>";
              html += "</li>";
         });

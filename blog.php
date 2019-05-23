@@ -23,13 +23,13 @@
 
 
 
-$pdo = new PDO("mysql:host=localhost;dbname=9c",'root','');
+$pdo = new PDO("mysql:host=172.27.0.9;dbname=ajiu",'root','AJiu0707');
 $pdo->exec("set names utf8");
-$sql = "SELECT username FROM yolo";
+$sql = "SELECT username password  FROM yolo";
 //$sql = "SELECT * FROM yolo";
 $res = $pdo->query($sql);
 $row = $res->fetchAll();
-
+var_dump($row);
 echo json_encode($row,JSON_UNESCAPED_UNICODE);
 
 
