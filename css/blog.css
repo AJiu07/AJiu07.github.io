@@ -106,6 +106,7 @@ body{
 	height: 300px;
 	margin: 70px;
 	margin-top: 70px;
+	opacity: 0.3;
 }
 .right li a{
 	text-decoration: none;
