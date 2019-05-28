@@ -31,8 +31,8 @@ body{
 	font-size: 15px;
 }
 .left .top p{
-	margin-top: 10px;
-	font-size: 15px;
+	margin-top: 30px;
+	font-size: 20px;
 }
 .left .center{
 	background: #d3d3d3;
@@ -45,7 +45,7 @@ body{
 	padding-top: 30px;
 }
 .left .center .pl{
-	padding-top: 3%;
+	padding-top: 1%;
 	border-radius: 20px;
 	width: 100%;
 	height: 125px;
@@ -56,21 +56,20 @@ body{
 	width: 50px;
 	height: 50px;
 	float: left;
-	margin-top: 27px;
+	margin-top: 20px;
 	margin-left: 190px;
 }
-.left .center .name{
+.left .center p{
 	font-size: 20px;
-	padding-top: 20px;
-	padding-left: 20px;
-	float: left;
+	margin-top: 10px;
+	padding-left: 250px;
 }
-.left .center .content{
+/*.left .center .content{
 	font-size: 15px;
 	float: left;
 	margin-top: 45px;
-	margin-left: -50px;
-}
+	margin-left: -30px;
+} */
 .left .center-two{
 	width: 100%;
 	height: 200px;
@@ -157,7 +156,7 @@ body{
 	left: 40%;
 	float: left;
 	overflow: auto;
-	text-align: center; 
+	text-align: center;
 }
 .message .title h1{
 	font-weight: bolder;
@@ -405,7 +404,7 @@ body{
 		position: absolute;
 		float: left;
 		overflow: auto;
-		text-align: center; 
+		text-align: center;
 		left: 300px;
 	}
 	.message .title h1{
