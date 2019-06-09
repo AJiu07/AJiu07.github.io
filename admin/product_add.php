@@ -1,6 +1,22 @@
 <?php
 require 'forbid.php';
 require 'header.php';
+require '../php/pdo.php';
+
+if(!empty($_POST['title'])){
+	$title 	  = htmlentities($_POST['title']);
+	$intro 	  = htmlentities($_POST['intro']);
+	$classify = htmlentities($_POST['classify']);
+	$content  = htmlentities($_POST['content']); 
+
+	$date = date("Y/m/d H:i");
+	$sql = "INSERT INTO blog(title,intro,classify,content,registration)
+			VALUES ('$title','$intro','$classify','$content','$date')";
+	$res = $pdo->exec($sql);
+	var_dump($res);
+}
+
+
 ?>
 <!-- End Navbar -->
 <div class="content">
@@ -9,50 +25,44 @@ require 'header.php';
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header card-header-primary">
-						<h4 class="card-title">添加商品</h4>
-						<p class="card-category">添加一个商品</p>
+						<h4 class="card-title">添加文章</h4>
+						<p class="card-category">添加一篇文章</p>
 					</div>
 					<div class="card-body">
-						<form>
+						<form action="product_add.php" method="post">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label class="bmd-label-floating">商品名称</label>
-										<input type="text" class="form-control">
+										<label class="bmd-label-floating">标题</label>
+										<input type="text" class="form-control" name="title">
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<label class="bmd-label-floating">商品单价</label>
-										<input type="number" class="form-control">
+										<label class="bmd-label-floating">简介</label>
+										<input type="text" class="form-control" name="intro">
 									</div>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label class="bmd-label-floating">商品库存</label>
-										<input type="number" class="form-control">
+										<label class="bmd-label-floating">分类</label>
+										<input type="text" class="form-control" name="classify">
 									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="bmd-label-floating">商品编号</label>
-										<input type="text" class="form-control">
-									</div>
-								</div>
+								</div>								
 							</div>
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group">
-										<label>商品描述</label>
+										<label>内容</label>
 										<div class="form-group bmd-form-group">
-											<textarea class="form-control" rows="5"></textarea>
+											<textarea class="form-control" rows="5" name="content"></textarea>
 										</div>
 									</div>
 								</div>
 							</div>
-							<button type="submit" class="btn btn-primary pull-right">添加商品</button>
+							<button type="submit" class="btn btn-primary pull-right">添加文章</button>
 							<div class="clearfix"></div>
 						</form>
 					</div>

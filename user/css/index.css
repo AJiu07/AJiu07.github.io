@@ -1,0 +1,132 @@
+
+/* initialize */
+
+/* 
+	不使用*初始化，
+	网站很大，CSS样式表文件很大，这样写的话，会把所有的标签都初始化一遍，这样就大大的加强了网站运行的负载，会使网站加载的时候需要很长一段时间。 
+*/
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+	/* 禁止选中文本 */
+	-webkit-user-select: none;    
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    font: 12px"微软雅黑","Arial Narrow",HELVETICA;
+    background:#f0f0f0;
+}
+p{
+	/* 在长单词或 URL 地址内部进行换行。 */
+	word-wrap: break-word;
+}
+
+/* indedx */
+.header{
+	/* 背景图片 */
+	background: url(../img/background.jpg);   
+	background-color: #fff;
+    background-repeat: no-repeat;
+    /* 背景大小 */
+    background-size: cover;
+
+    position:fixed;
+    top: 0;
+    left: 0;
+
+    width:100%;
+    height: 100%;
+    min-width: 100%;
+
+    z-index:-10;
+    zoom: 1;
+    
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+
+    overflow: hidden;
+}
+
+.my img{
+	float: right;
+	width: 10vmin;
+	height: 10vmin;
+	margin: 5vmin;
+	cursor: pointer; 
+}
+.header .content{
+	/* 水平、垂直居中 */
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-shadow: 5px 5px 25px #fff;
+}
+.header .content p{
+	font-size: 10vmin;
+	margin-bottom: 5vmin;
+	text-align: center;
+}
+.header .content h1{
+	font-size: 11vmin;
+	text-align: center;
+	/* 文本禁止换行 */
+	white-space: nowrap;
+}
+.header .footer a{
+	background: url(../img/2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position:fixed;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%,-50%);
+
+    width: 10vmin;
+    height: 10vmin;
+    min-width: 10vmin;
+
+    z-index:-10;
+    zoom: 1;
+    
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+}
+
+/* banner */
+.banner{
+	display: none;
+	overflow: hidden;
+}
+.banner-b{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.banner-b h1{
+	font-size: 10vmin;
+    padding-bottom: 5vmin;
+}
+.banner-b p{
+	font-weight: bolder;
+	font-size: 3vmin;
+}
+.banner-b .cm{
+	font-size: 5vmin;
+	margin-top: 5vmin;
+}
+.banner-b .code img{
+	width: 30vmin;
+	height: 30vmin;
+	margin-top: 5vmin;
+}

@@ -48,19 +48,19 @@ require 'forbid.php';
           <li class="nav-item">
             <a class="nav-link" href="products.php">
               <i class="material-icons">library_books</i>
-              <p>商品管理</p>
+              <p>文章管理</p>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="carts.php">
-              <i class="material-icons">shopping_cart</i>
-              <p>购物车管理</p>
+              <i class="material-icons">library_books</i>
+              <p>评论管理</p>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="orders.php">
-              <i class="material-icons">list</i>
-              <p>订单管理</p>
+              <i class="material-icons">library_books</i>
+              <p>留言管理</p>
             </a>
           </li>
           <!-- your sidebar here -->

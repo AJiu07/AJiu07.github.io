@@ -1,6 +1,12 @@
 <?php
 require 'forbid.php';
 require 'header.php';
+require '../php/pdo.php';
+
+$sql = "SELECT id,title,intro,classify,content,registration FROM blog";
+$res = $pdo->query($sql);
+$row = $res->fetchAll(PDO::FETCH_BOTH);
+
 ?>
 <!-- End Navbar -->
 <div class="content">
@@ -40,9 +46,6 @@ require 'header.php';
                     内容
                   </th>
                   <th>
-                    图片
-                  </th>
-                  <th>
                     上传时间
                   </th>
                   <th>
@@ -50,34 +53,39 @@ require 'header.php';
                   </th>
                 </thead>
                 <tbody>
+                  <?php foreach ($row as $k): ?>
                   <tr>
                     <td>
-                      1
+                      <?php echo $k['id']; ?>
                     </td>
                     <td>
-                      2019120201928837
+                      <?php echo $k['title']; ?>
                     </td>
                     <td>
-                      Macbook Pro
+                      <?php echo $k['intro']; ?>
                     </td>
                     <td>
-                      苹果笔记本电脑
+                      <?php echo $k['classify']; ?>
                     </td>
                     <td>
-                      12
+                      <?php 
+                        if(strlen($k['content'])>=10){
+                          echo mb_substr($k['content'],0,6,'UTF-8').'...';
+                        }else{
+                          echo $k['content'];
+                        }
+                      ?> 
                     </td>
                     <td>
-                      13500.00
+                      <?php echo $k['registration']; ?>
                     </td>
                     <td>
-                      2019-01-02 20:00:00
-                    </td>
-                    <td>
-                      <a href="product_edit.php?id=<?php echo $pro['id'];?>">编辑</a>
+                      <a href="product_edit.php?id=<?php echo $k['id'];?>">编辑</a>
                       |
-                      <a href="product_del.php?id=<?php echo $pro['id'];?>">删除</a>
+                      <a href="product_del.php?id=<?php echo $k['id'];?>">删除</a>
                     </td>
                   </tr>
+                <?php endforeach; ?>
                 </tbody>
               </table>
             </div>

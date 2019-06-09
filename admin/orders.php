@@ -1,6 +1,12 @@
 <?php
 require 'forbid.php';
 require 'header.php';
+require '../php/pdo.php';
+
+$sql = "SELECT id,name,email,content,registration FROM lword";
+$res = $pdo->query($sql);
+$row = $res->fetchAll(PDO::FETCH_BOTH);
+
 ?>
 <!-- End Navbar -->
 <div class="content">
@@ -11,8 +17,8 @@ require 'header.php';
           <div class="card-header card-header-primary">
             <div class="row">
               <div class="col-12">
-                <h4 class="card-title ">所有订单</h4>
-                <p class="card-category"> 所有订单列表</p>
+                <h4 class="card-title ">所有留言</h4>
+                <p class="card-category"> 所有留言列表</p>
               </div>
             </div>
 
@@ -25,30 +31,38 @@ require 'header.php';
                     ID
                   </th>
                   <th>
-                    下单用户
+                    用户
                   </th>
                   <th>
-                    订单价格
+                    邮箱
                   </th>
                   <th>
-                    下单时间
+                    留言内容
+                  </th>
+                  <th>
+                    留言时间
                   </th>
                 </thead>
                 <tbody>
+                  <?php foreach ($row as $k): ?>
                   <tr>
                     <td>
-                      1
+                      <?php echo $k['id']; ?>
                     </td>
                     <td>
-                      zhangsan
+                      <?php echo $k['name']; ?>
                     </td>
                     <td>
-                      20000.00
+                      <?php echo $k['email']; ?>
                     </td>
                     <td>
-                      2019-01-02 20:00:00
+                      <?php echo $k['content']; ?>
+                    </td>
+                    <td>
+                      <?php echo $k['registration']; ?>
                     </td>
                   </tr>
+                <?php endforeach; ?>
                 </tbody>
               </table>
             </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： 127.0.0.1:3306
--- 生成日期： 2019-06-05 17:20:41
+-- 生成日期： 2019-06-09 23:40:09
 -- 服务器版本： 5.7.24
 -- PHP 版本： 7.3.1
 
@@ -35,9 +35,43 @@ CREATE TABLE IF NOT EXISTS `blog` (
   `intro` varchar(50) NOT NULL COMMENT '简介',
   `classify` char(15) NOT NULL DEFAULT 'web' COMMENT '分类',
   `content` varchar(500) DEFAULT NULL COMMENT '内容',
+  `img` blob COMMENT '图片',
+  `registration` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '添加时间',
   PRIMARY KEY (`id`),
   UNIQUE KEY `title` (`title`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `blog`
+--
+
+INSERT INTO `blog` (`id`, `title`, `intro`, `classify`, `content`, `img`, `registration`) VALUES
+(1, 'Demo', '这是一篇测试文章', 'PHP', '这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章', '', '2019-06-07 15:01:02');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `lword`
+--
+
+DROP TABLE IF EXISTS `lword`;
+CREATE TABLE IF NOT EXISTS `lword` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '用户编号',
+  `name` varchar(20) NOT NULL COMMENT '用户名',
+  `email` varchar(50) NOT NULL COMMENT '邮箱',
+  `content` varchar(100) NOT NULL COMMENT '留言内容',
+  `registration` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `lword`
+--
+
+INSERT INTO `lword` (`id`, `name`, `email`, `content`, `registration`) VALUES
+(1, 'yolo', '846822366@qq.com', '这是一个Demo', '2019-06-07 16:26:57');
 
 -- --------------------------------------------------------
 
@@ -57,14 +91,14 @@ CREATE TABLE IF NOT EXISTS `user` (
   UNIQUE KEY `name` (`name`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `tel` (`tel`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- 转存表中的数据 `user`
 --
 
 INSERT INTO `user` (`id`, `name`, `password`, `email`, `tel`, `registration`) VALUES
-(2, 'AJiu_', '202cb962ac59075b964b07152d234b70', '84682236@qq.com', '18990239906', '2019-06-05 08:19:32');
+(1, 'ajiu_', '16aa39081410e8ad35acfec2742f07a3', '846822366@qq.com', '18990239907', '2019-06-06 15:21:48');
 
 -- --------------------------------------------------------
 
@@ -88,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'AJiu', '846822366@qq.com', 'fc389829a659b0aefdcc73b29ebf8aa1', '2019-06-05 07:41:00', '127.0.0.1'),
+(1, 'AJiu', '846822366@qq.com', 'fc389829a659b0aefdcc73b29ebf8aa1', '2019-06-07 14:46:00', '127.0.0.1'),
 (2, 'yolo', '846822367@qq.com', '4fded1464736e77865df232cbcb4cd19', '2019-06-05 07:42:00', '127.0.0.1');
 
 -- --------------------------------------------------------
