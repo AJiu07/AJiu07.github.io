@@ -1,0 +1,301 @@
+/* initialize */
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,button{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+body{
+    font: 12px"微软雅黑","Arial Narrow",HELVETICA;
+    background: #f9f9f9;
+    -webkit-text-size-adjust: 100%;
+}
+img{
+    border: 0;
+    vertical-align: middle;
+}
+p{
+    word-wrap: break-word;
+}
+.left{
+    width: 40%;
+    height: 100vh;
+    background: #f3f3f3;
+    position: fixed;
+    float: left;
+    overflow: hidden;
+}
+.left .top{
+    width: 100%;
+    height: 23vh;
+    background: #000;
+    text-align: center;
+    padding-top: 5vh;
+    color: #fff;
+    opacity: 0.5;
+}
+.left .top h2{
+    font-size: 4vmin;
+}
+.left .top a{
+    text-decoration:none;
+    color: #fff;
+    font-size: 2vmin;
+    margin: 1vmin;
+    margin-top: 2.5vh;
+    display: inline-block;
+}
+.left .top p{
+    margin-top: 2vh;
+    font-size: 2.5vmin;
+}
+.left .center{
+    background: #fff;
+}
+.left .center li{
+    width: 100%;
+    background: #fff;
+    list-style: none;
+}
+.left .center .pl{
+    margin-top: 2vh;
+    border-radius: 20px;
+    width: 100%;
+    height: 15vh;
+    background: #FFFAFA;
+    position: relative;
+}
+.left .center img{
+    border-radius: 100%;
+    width: 7vmin;
+    height: 7vmin;
+    float: left;
+    margin-top: 4vh;
+    margin-left: 2vmin;
+}
+.left .center h3{
+    display: inline-block;
+    font-size: 3vmin;
+    margin-top: 3vh;
+    margin-left: 3vmin;
+}
+.left .center p{
+    width: 40vmin;
+    display: inline-block;
+    font-size: 2vmin;
+    margin-top: 2vh;
+    margin-left: 3vmin;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.left .center-two{
+    width: 100%;
+    height: 20vh;
+    background: #f3f3f3;
+    font-size: 2.5vmin;
+}
+.left .center-two a{
+    display: inline-block;
+    float: left;
+    margin-top: 1vh;
+    margin-left: 4vmax;
+    padding: 0;
+    white-space: nowrap;
+    width: 13vmax;
+    height: 3.5vh;
+    line-height: 3.5vh;
+    background: #000;
+    text-align: center;
+    border-radius: 20px;
+    opacity: 0.5;
+    text-decoration:none;
+    color: #fff;
+}
+.message{
+    position: relative;
+    left: 41%;
+    width: 59%;
+    font-weight: bold;
+    overflow: hidden;
+}
+.message .title{
+    text-align: center;
+    height: 23vh;
+}
+.message .title h1{
+    font-weight: bold;
+    line-height: 15vh;
+}
+.message .title h2{
+    font-size: 2vmin;
+}
+.message .banner{
+    width: 50vmax;
+    height: 33vh;
+    background: #f9f9f9;
+    margin: 1vh auto;
+    border-radius: 15px;
+}
+.message .banner .ly{
+    background: #fff;
+    width: 100%;
+    border-radius: 15px;
+}
+.message .banner .ly img{
+    margin-top: 5.5vh;
+    margin-left: 2vmin;
+    border-radius: 50%;
+    width: 5vmax;
+    height: auto;
+}
+.message .banner .ly #y1{
+    display: block;
+    width: 30vmin;
+    height: 5vh;
+    margin-left: 15vmin;
+    margin-top: -12vh;
+    font-size: 2vmin;
+}
+.message .banner .ly #y2{
+    display: block;
+    width: 50vmin;
+    height: 12vh;
+    margin-top: 2vh;
+    margin-left: 15vmin;
+    font-size: 3vmin;
+}
+.message .banner .ly #y3{
+    width: 30vmin;
+    height: 5vh;
+    margin-top: 2vh;
+    margin-left: 15vmin;
+    font-size: 1.5vmin;
+}
+.message .banner .ly #btn{
+    width: 20vmin;
+    height: 5vh;
+    margin-left: 10vmin;
+    background: #fff;
+    font-size: 2vmin;
+    border: 0;
+    border-radius: 15px;
+}
+.message .comment{
+    width: 50vmax;
+    background: #f9f9f9;
+    margin: 1vh auto;
+}
+.message .comment .ly{
+    height: 20vh;
+    background: #fff;
+    margin-bottom: 2vh;
+    border-radius: 15px;
+}
+.message .comment .ly img{
+    margin-top: 5.5vh;
+    border-radius: 50%;
+    width: 5vmax;
+    height: auto;
+    margin-left: 7vmin;  
+}
+.message .comment .ly h2{
+    display: block;
+    width: 30vmin;
+    height: 5vh;
+    margin-left: 20vmin;
+    margin-top: -12vh;
+}
+.message .comment .ly p{
+    display: block;
+    width: 30vmin;
+    height: 5vh;
+    margin-top: 1.5vh;
+    margin-left: 20vmin;
+    word-break: break-all;
+}
+.message .paging{
+    width: 50vmax;
+    height: 5vh;
+    margin-left: 9vmin;
+}
+.message .paging a{
+    display: inline-block;
+    width: 9vmin;
+    height: 3vh;
+    padding-top: 3vh;
+    font-size: 3vmin;
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+}
+.message .paging li{
+    list-style: none;
+    float: left;
+}
+
+@media(max-width: 1024px){
+    .left{
+        width: 100%;
+        height: 23vh;
+        background: #07cbc9;
+        z-index: 1;
+    }
+    .message{
+        position: relative;
+        left: 0;
+        width: 100%;
+        font-weight: bold;
+        overflow: hidden;
+    }
+    .message .banner{
+        width: 100%;
+        height: 40vh;
+        border-radius: 0;
+    }
+    .message .banner .ly #y1{
+        display: block;
+        width: 30vmin;
+        height: 5vh;
+        margin-left: 15vmin;
+        margin-top: -7vh;
+    }
+    .message .banner .ly #y2{
+        display: block;
+        width: 60vmin;
+        height: 12vh;
+        margin-left: 15vmin;
+    }
+    .message .banner .ly #y3{
+        width: 52vmin;
+        height: 5vh;
+        margin-top: 2vh;
+        margin-left: 15vmin;
+    }
+    .message .banner .ly #btn{
+        width: 20vmin;
+        height: 5vh;
+        margin-top: 3vh;
+        margin-left: 15vmin;
+        background: #fff;
+        font-size: 2vmin;
+        border: 0;
+        border-radius: 15px;
+    }
+    .message .comment{
+        width: 100%;
+    }
+    .message .comment .ly{
+        border-radius: 0;
+    }
+    .message .comment .ly h2{
+        display: block;
+        width: 30vmin;
+        height: 5vh;
+        margin-left: 20vmin;
+        margin-top: -5vh;
+    }
+    .message .comment .ly p{
+        width: 50vmin;
+    }
+}

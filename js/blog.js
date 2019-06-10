@@ -7,22 +7,24 @@ $(function(){
     });
 
 
-    $.get("../../php/blog.php",function(data){
+    $.get("../php/blog.php",function(data){
         data = JSON.parse(data);
         var html = "";
         data.forEach(function(element, index) {
-             html += "<li>";
-             html += "<div class='pl'>";
-             html += "<img src='img/6.png'>";
-             html += "<p class='name'>" + element.username + "</p>";
-             html += "<p class='content'>" + element.email + "</p>";
-             html += "</div>";
-             html += "</li>";
-        });
+           html += "<li>";
+           html += "<div class='pl'>";
+           html += "<img src='img/6.png'>";
+           html += "<h3 class='name'>" + element.username + "</h3>";
+           html += "<br>";
+           html += "<p class='content'>" + element.email + "</p>";
+           html += "</div>";
+           html += "</li>";
+       });
         $("#person_list").html(html);
 
     });
 
+    
 
     // $.ajax({
     //   url:"blog.php",

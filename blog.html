@@ -18,39 +18,40 @@
 		<div class="top">
 			<h2>AJiu`s Blog</h2>
 			<a href="blog.html">主页</a>
-			<a href="javascript:">留言板</a>
+			<a href="message.html">留言板</a>
 			<p>心有山海，静而无边</p>
 		</div>
 		<div class="center">
-			<form action="blog.html" method="get">
+			<form action="php/blog.php" method="get">
 				<ul id = "person_list">
-					<!-- <li>
-						<div class="pl">
-							<img src="img/6.png">
-							<p class="name"></p>
-							<p class="content"></p>
-						</div>
-					</li>
-				 -->
+					<!-- 评论
+						<li>
+							<div class="pl">
+								<img src="img/6.png">
+								<p class="name"></p>
+								<p class="content"></p>
+							</div>
+						</li>
+					-->
 				</ul>
 			</form>
 			<div class="center-two">
 				<div class="more">
-					<a href="javascript:">more</a>
+					<a href="message.html">more</a>
 				</div>
 				<div class="message1">
-					<a href="javascript:">new message</a>
+					<a href="message.html">new message</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="right" style="display: block;">
+	<div class="right">
 		<ul>
 			<li>
 				<a href="#" style="color: #000;">
 					<h1>DEMO:第一篇博客</h1>
 					<content>DEMO:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</content>
-					<p>0条评论</p>
+					<p>两个月前发布 | 0条评论</p>
 					<img src="img/3.jpg">
 				</a>
 			</li>
@@ -58,7 +59,7 @@
 				<a href="#">
 					<h1>DEMO:第一篇博客</h1>
 					<content>DEMO:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</content>
-					<p>0条评论</p>
+					<p>两个月前发布 | 0条评论</p>
 					<img src="img/3.jpg">
 				</a>
 			</li>
@@ -66,7 +67,7 @@
 				<a href="#">
 					<h1>DEMO:第一篇博客</h1>
 					<content>DEMO:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</content>
-					<p>0条评论</p>
+					<p>两个月前发布 | 0条评论</p>
 					<img src="img/3.jpg">
 				</a>
 			</li>
@@ -74,7 +75,7 @@
 				<a href="#">
 					<h1>DEMO:第一篇博客</h1>
 					<content>DEMO:内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</content>
-					<p>0条评论</p>
+					<p>两个月前发布 | 0条评论</p>
 					<img src="img/3.jpg">
 				</a>
 			</li>
@@ -82,96 +83,6 @@
 		<div class="footer">
 			<a href="#">下一页</a>
 		</div>
-	</div>
-	<!--留言板-->
-	<div class="message" style="display: none;">
-		<div class="title">
-			<h1>MESSAGE</h1>
-			<h2 style="margin: 25px">已有0人留言</h2>
-		</div>
-		<div class="banner">
-			<div class="ly">
-				<img src="img/6.png" style="border-radius: 100%;">
-				<input id="y1" type="text" placeholder="在这里输入你的昵称">
-				<textarea id="y2" type="textarea" placeholder="你想说什么呢?"></textarea>
-				<input id="y3" type="text" placeholder="你的邮箱? (不会被人看见的.除了我)">
-				<button id="btn">留言</button>
-			</div>
-		</div>
-		<div class="comment">
-			<div class="ly">
-				<img src="img/6.png">
-				<h2>YOLO</h2>
-				<p>YOLO,YOLO,YOLO,YOLO</p>
-			</div>
-			<div class="ly">
-				<img src="img/6.png">
-				<h2>YOLO</h2>
-				<p>YOLO,YOLO,YOLO,YOLO</p>
-			</div>
-			<div class="ly">
-				<img src="img/6.png">
-				<h2>YOLO</h2>
-				<p>YOLO,YOLO,YOLO,YOLO</p>
-			</div>
-			<div class="ly">
-				<img src="img/6.png">
-				<h2>YOLO</h2>
-				<p>YOLO,YOLO,YOLO,YOLO</p>
-			</div>
-			<div class="ly">
-				<img src="img/6.png">
-				<h2>YOLO</h2>
-				<p>YOLO,YOLO,YOLO,YOLO</p>
-			</div>
-			<div class="ly">
-				<img src="img/6.png">
-				<h2>YOLO</h2>
-				<p>YOLO,YOLO,YOLO,YOLO</p>
-			</div>
-			<div class="ly">
-				<img src="img/6.png">
-				<h2>YOLO</h2>
-				<p>YOLO,YOLO,YOLO,YOLO</p>
-			</div>
-			<div class="ly">
-				<img src="img/6.png">
-				<h2>YOLO</h2>
-				<p>YOLO,YOLO,YOLO,YOLO</p>
-			</div>
-			<div class="ly">
-				<img src="img/6.png">
-				<h2>YOLO</h2>
-				<p>YOLO,YOLO,YOLO,YOLO</p>
-			</div>
-		</div>
-		<div class="paging">
-			<button id="btn1">
-				<a href="javascript:">上一页</a>
-			</button>
-			<ul>
-				<li>
-					<a href="#">1</a>
-				</li>
-				<li>
-					<a href="#">2</a>
-				</li>
-				<li>
-					<a href="#">3</a>
-				</li>
-				<li style="font-weight: bolder; padding-top: 15px;">
-					……
-				</li>
-			</ul>
-			<li>
-				<a href="#">9</a>
-			</li>
-			<button id="btn2">
-				<a href="#">下一页</a>
-			</button>
-
-		</div>
-
 	</div>
 </body>
 </html>
