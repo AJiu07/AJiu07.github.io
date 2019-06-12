@@ -265,6 +265,16 @@ p{
     border: 0;
     border-radius: 15px;
 }
+.back-top{
+    display: none;  
+}
+.back-top img{
+    position: fixed;
+    width: 5vmax;
+    height: auto;
+    right: 0;
+    bottom: 10vh;
+}
 .small{
     display: none;
 }

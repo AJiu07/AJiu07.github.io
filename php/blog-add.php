@@ -3,7 +3,6 @@
 require 'pdo.php';
 
 $id = $_GET['id'];
-echo $id;
 $sql = "SELECT id,title,content,registration FROM blog
 WHERE id = '$id'";
 $res = $pdo->query($sql);

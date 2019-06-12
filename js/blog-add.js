@@ -25,6 +25,12 @@ $(function(){
         $('.message-ly').hide(1000);
         $('.tb').show(3000);
     });
+    $(document).click(function(){
+        $('.exit').hide(2500);
+        $('.message').hide(2500);
+        $('.message-ly').hide(1000);
+        $('.tb').show(3000);
+    });
 
     /* .left部分遍历留言 */
     $.get("../php/message.php",function(data){
@@ -53,11 +59,11 @@ $(function(){
         /* 调用getQueryVariable方法 提取URL中的id */
         let id = getQueryVariable('id');
             html += "<h1 class='title'>" + data[id-1].title + "</h1>";  /* data下标从0开始，id从1开始，id-1匹配data下标 */
-            html += "<content>" + data[id-1].content + "</content>";
             html += "<p>" + data[id-1].registration + "发布 | 条评论</p>";
+            html += "<content>" + data[id-1].content + "</content>";            
         $("#blog-b").html(html);
     });
-
+    /* 下一篇文章 */
     $('.next').click(function(){
         let id = getQueryVariable('id');
         let Id = id-1;
@@ -65,8 +71,19 @@ $(function(){
             window.location.href = '../blog-add.html?id=' + Id + '';
         }else{
             alert('最后一篇啦');
+        }        
+    });
+    /* 回到顶部 */
+    $(window).scroll(function(){
+        if ($(window).scrollTop() > 10){
+            $(".back-top").css('display','block');
+        }else{
+            $(".back-top").css('display','none');
         }
-        
+    });
+    $('.back-top').click(function(){
+        //var scrollTop  = document.documentElement.scrollTop||document.body.scrollTop;
+        $('body,html').animate({scrollTop:0},1000);
     });
 });
 
