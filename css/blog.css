@@ -177,6 +177,19 @@ p{
 	line-height: 5vh;
 	color: #fff;
 }
+.back-top{
+	display: none;	
+}
+.back-top img{
+	position: fixed;
+	width: 5vmax;
+	height: auto;
+	right: 0;
+	bottom: 10vh;
+}
+
+
+
 @media(max-width: 1024px){
 	.left{
 		width: 100%;

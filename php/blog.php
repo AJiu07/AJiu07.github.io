@@ -1,12 +1,8 @@
 <?php
+    require 'pdo.php';
 
-
-//172.27.0.9
-$pdo = new PDO("mysql:host=localhost;dbname=9c",'root','');
-$pdo->exec("set names utf8");
-$sql = "SELECT * FROM yolo ORDER BY id DESC LIMIT 4";
-//$sql = "SELECT * FROM yolo";
-$res = $pdo->query($sql);
-$row = $res->fetchAll();
-
-echo json_encode($row,JSON_UNESCAPED_UNICODE);
+    $sql = "SELECT id,title,intro,classify,content,registration FROM blog  ORDER BY id DESC";
+    $res = $pdo->query($sql);
+    $row = $res->fetchAll();
+    /* 把查询出来的数据转为JSON对象输出 */
+    echo json_encode($row,JSON_UNESCAPED_UNICODE);
