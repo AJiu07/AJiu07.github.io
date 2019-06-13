@@ -51,11 +51,13 @@
         </div>
         <div class="banner">
             <div class="ly">
-                <img src="img/6.png">
-                <input id="y1" type="text" placeholder="在这里输入你的昵称">
-                <textarea id="y2" type="textarea" placeholder="你想说什么呢?"></textarea>
-                <input id="y3" type="text" placeholder="你的邮箱? (不会被人看见的.除了我)">
-                <button id="btn">留言</button>
+                <form action="php/message_new.php" method="post">
+                    <img src="img/6.png">
+                    <input id="y1" type="text" name="name" placeholder="在这里输入你的昵称">
+                    <textarea id="y2" type="textarea" name="content" placeholder="你想说什么呢?"></textarea>
+                    <input id="y3" type="text" name="email" placeholder="你的邮箱? (不会被人看见的.除了我)">
+                    <button id="btn" name="btn">留言</button>
+                </form>                
             </div>
         </div>
         <div class="comment">

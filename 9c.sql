@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： 127.0.0.1:3306
--- 生成日期： 2019-06-12 17:20:48
+-- 生成日期： 2019-06-13 15:26:33
 -- 服务器版本： 5.7.24
 -- PHP 版本： 7.3.1
 
@@ -47,7 +47,32 @@ CREATE TABLE IF NOT EXISTS `blog` (
 
 INSERT INTO `blog` (`id`, `title`, `intro`, `classify`, `content`, `img`, `registration`) VALUES
 (1, 'Demo', '这是一篇测试文章', 'PHP', '这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章这是另一篇测试文章', '', '2019-06-07 15:01:02'),
-(2, 'Demo2', '另一篇Demo', 'web', '另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo,另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo', NULL, '2019-06-12 05:32:00');
+(2, 'Demo2', '另一篇Demo', 'web', '另一篇Demo另一篇Demo另一篇Demo\r\n另一篇Demo另一篇Demo另一篇Demo\r\n另一篇Demo另一篇Demo另一篇Demo\r\n另一篇Demo另一篇Demo另一篇Demo\r\n另一篇Demo另一篇Demo另一篇Demo\r\n篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo另一篇Demo', NULL, '2019-06-12 05:32:00');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `comment`
+--
+
+DROP TABLE IF EXISTS `comment`;
+CREATE TABLE IF NOT EXISTS `comment` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '用户编号',
+  `uid` int(11) NOT NULL COMMENT '文章id',
+  `name` varchar(20) NOT NULL COMMENT '用户名',
+  `email` varchar(50) NOT NULL COMMENT '邮箱',
+  `content` varchar(350) NOT NULL COMMENT '内容',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `comment`
+--
+
+INSERT INTO `comment` (`id`, `uid`, `name`, `email`, `content`) VALUES
+(1, 1, 'ajiu', '846822366@qq.com', '我来测试一下行不行'),
+(2, 1, '匿名', '8468223@qq.com', '22222222222222222222222222'),
+(3, 2, 'AJiu', '846822@qq.com', '333333333333333333333333333333');
 
 -- --------------------------------------------------------
 
@@ -64,8 +89,12 @@ CREATE TABLE IF NOT EXISTS `lword` (
   `registration` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `name_5` (`name`),
+  KEY `name_2` (`name`),
+  KEY `name_3` (`name`),
+  KEY `name_4` (`name`,`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
 --
 -- 转存表中的数据 `lword`
@@ -76,7 +105,8 @@ INSERT INTO `lword` (`id`, `name`, `email`, `content`, `registration`) VALUES
 (2, '匿名', '8468223@qq.com', '这是一个Demo', '2019-06-12 01:12:43'),
 (3, 'ajiu.', '84682232@qq.com', '这是一个Demo', '2019-06-12 01:15:45'),
 (4, 'ajiu', '84682231@qq.com', '这是一个Demo', '2019-06-12 01:13:43'),
-(5, 'ajiu..', '84682233@qq.com', '这是一个Demo', '2019-06-12 01:15:58');
+(5, 'ajiu..', '84682233@qq.com', '这是一个Demo', '2019-06-12 01:15:58'),
+(8, 'yolo-first', '846822361@qq.com', '新增留言demo', '2019-06-13 02:39:00');
 
 -- --------------------------------------------------------
 

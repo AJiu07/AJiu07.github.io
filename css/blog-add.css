@@ -19,6 +19,9 @@ img{
 p{
     word-wrap: break-word;
 }
+span{
+    display: none;
+}
 .left{
     width: 40%;
     height: 100vh;
@@ -144,7 +147,7 @@ p{
     /* 弹性伸缩盒子模型 */
     display: -webkit-box;
     /**/
-    font-size: 4vmin;
+    font-size: 2vmin;
     color: rgb(0,0,0,.6);
 }
 .right a{
@@ -203,7 +206,7 @@ p{
     display: block;
     width: 40vmin;
     margin-top: -1vh;
-    margin-bottom: 4vh;
+    margin-bottom: 7vh;
     display: -webkit-box;
     font-size: 1.5vmin;
 }
@@ -239,6 +242,7 @@ p{
     margin-left: 2vmin;
     margin-top: 2vh;
     font-size: 1vmin;
+    outline:none;
 }
 .right .pl .message-ly #y2{
     display: block;
@@ -247,6 +251,7 @@ p{
     margin-top: 2vh;
     margin-left: 2vmin;
     font-size: 1.5vmin;
+    outline:none;
 }
 .right .pl .message-ly #y3{
     width: 25vmin;
@@ -254,6 +259,7 @@ p{
     margin-top: 2vh;
     margin-left: 2vmin;
     font-size: 1.5vmin;
+    outline:none;
 }
 .right .pl .message-ly #btn{
     width: 20vmin;

@@ -1,13 +1,13 @@
 
 function getQueryVariable(variable)
 {
-       var query = window.location.search.substring(1);
-       var vars = query.split("&");
-       for (var i=0;i<vars.length;i++) {
-               var pair = vars[i].split("=");
-               if(pair[0] == variable){return pair[1];}
-       }
-       return(false);
+   var query = window.location.search.substring(1);
+   var vars = query.split("&");
+   for (var i=0;i<vars.length;i++) {
+       var pair = vars[i].split("=");
+       if(pair[0] == variable){return pair[1];}
+   }
+   return(false);
 }
 
 $(function(){
@@ -25,7 +25,7 @@ $(function(){
         $('.message-ly').hide(1000);
         $('.tb').show(3000);
     });
-    $(document).click(function(){
+    $(document["class!='message-ly'"]).click(function(e){
         $('.exit').hide(2500);
         $('.message').hide(2500);
         $('.message-ly').hide(1000);
@@ -58,9 +58,9 @@ $(function(){
         let html = '';
         /* 调用getQueryVariable方法 提取URL中的id */
         let id = getQueryVariable('id');
-            html += "<h1 class='title'>" + data[id-1].title + "</h1>";  /* data下标从0开始，id从1开始，id-1匹配data下标 */
-            html += "<p>" + data[id-1].registration + "发布 | 条评论</p>";
-            html += "<content>" + data[id-1].content + "</content>";            
+        html += "<h1 class='title'>" + data[id-1].title + "</h1>";  /* data下标从0开始，id从1开始，id-1匹配data下标 */
+        html += "<p>" + data[id-1].registration + "发布 | 条评论</p>";
+        html += "<content>" + data[id-1].content + "</content>";            
         $("#blog-b").html(html);
     });
     /* 下一篇文章 */
@@ -84,6 +84,19 @@ $(function(){
     $('.back-top').click(function(){
         //var scrollTop  = document.documentElement.scrollTop||document.body.scrollTop;
         $('body,html').animate({scrollTop:0},1000);
+    });
+
+    $.get('../php/blog-add.php',function(data){
+        data = JSON.parse(data);
+        /* 将后台data倒叙排列 */
+        data.reverse();
+        let html = '';
+        let id = getQueryVariable('id');
+        html += "<img src='img/6.png'>";  /* data下标从0开始，id从1开始，id-1匹配data下标 */
+        html += "<span name='id'>" + data[id-1].id + "</span>"
+        html += "<h2>" + data[id-1].name + "</h2>";
+        html += "<p>" + data[id-1].content + "</p>";            
+        $(".ly").html(html);        
     });
 });
 

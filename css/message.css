@@ -159,7 +159,7 @@ p{
 }
 .message .banner .ly #y2{
     display: block;
-    width: 50vmin;
+    width: 52vmin;
     height: 12vh;
     margin-top: 2vh;
     margin-left: 15vmin;
@@ -290,10 +290,12 @@ p{
     }
     .message .comment .ly h2{
         display: block;
-        width: 30vmin;
         height: 5vh;
         margin-left: 20vmin;
-        margin-top: -5vh;
+        margin-top: -6vh;
+        margin-bottom: 2vh;
+        white-space: nowrap;
+        font-size: 3.5vmax;
     }
     .message .comment .ly p{
         width: 50vmin;
